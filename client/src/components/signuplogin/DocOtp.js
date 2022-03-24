@@ -32,9 +32,9 @@ const DocOtp = () => {
           </label>
                     <input className='border border-gray-300 outline-none placeholder-gray-400 pl-9 pr-4 py-1 rounded-md transition focus:ring-2 focus:ring-purple-700' placeholder="password..." type="password"/>
                 </div>
-                <button className='mt-7 bg-violet-700 font-medium inline-flex items-center px-3 py-1 rounded-md shadow-md text-white transition hover:bg-violet-500' type="submit">
+                <Link to = "/docRegister"><button className='mt-7 bg-violet-700 font-medium inline-flex items-center px-3 py-1 rounded-md shadow-md text-white transition hover:bg-violet-500' type="submit">
                     Submit
-                </button>
+                </button></Link>
 
             </form>
             {/**Links */}

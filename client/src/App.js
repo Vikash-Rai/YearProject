@@ -8,6 +8,7 @@ import Blog from './components/home/Blog';
 import DocSignup from './components/signuplogin/DocSignup';
 import DocLogin from './components/signuplogin/DocLogin';
 import DocOtp from './components/signuplogin/DocOtp';
+import DocRegister from './components/forms/DocRegister';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path="/docSignup" element={<DocSignup/>}/> 
       <Route path="/docLogin" element={<DocLogin/>}/> 
       <Route path="/docOtp" element={<DocOtp/>}/> 
+      <Route path="/docRegister" element={<DocRegister/>}/> 
       </Routes>
     </BrowserRouter>
   );
