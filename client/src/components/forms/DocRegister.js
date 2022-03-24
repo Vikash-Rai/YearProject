@@ -1,5 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
+import TextField from '@mui/material/TextField';
+//import DateAdapter from '@mui/lab/AdapterDateFns';
 const DocRegister = () => {
   return (
     <>
@@ -136,6 +138,12 @@ const DocRegister = () => {
                                     </label>
                                     <DatePicker name='dob'  selected={startDate} onChange={(date) => setStartDate(date)}  className='border border-gray-300 outline-none placeholder-gray-400 pl-9 pr-4 py-1 rounded-md transition focus:ring-2 focus:ring-green-400' />
                                 </div> */}
+                                <div className='relative mt-2'>
+                                    <label className="block text-violet-700 text-sm  mb-2" for="username">
+                                        Date Of Berth
+                                    </label>
+                                    <TextField name='dob' type="date" defaultValue="2017-05-25" className='border border-gray-300 outline-none placeholder-gray-400 pl-9 pr-4 py-1 rounded-md transition focus:ring-2 focus:ring-rose-500'  />
+                                </div>
 
                                 <div className='relative lg:px-2 mt-2'>
                                     <label className="block text-violet-700 text-sm  mb-2" for="username">
