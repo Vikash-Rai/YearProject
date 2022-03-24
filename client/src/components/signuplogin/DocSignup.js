@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom';
 const DocSignup = () => {
     return (
         <>
@@ -53,9 +53,9 @@ const DocSignup = () => {
                                 </div>
                                 <div className='relative px-2 mt-2'>
                                     
-                                <button className='mt-7 bg-violet-700 font-medium inline-flex items-center px-3 py-1 rounded-md shadow-md text-white transition hover:bg-violet-500' type="submit">
-                    Send OTP
-                </button>
+                                <Link to = "/docOtp"> <button className='mt-7 bg-violet-700 font-medium inline-flex items-center px-3 py-1 rounded-md shadow-md text-white transition hover:bg-violet-500' type="submit">
+                                  Send OTP
+                </button></Link>
                                 </div>
 
                             </div>
@@ -64,7 +64,7 @@ const DocSignup = () => {
                         {/**Links */}
                         <div className='flex flex-col items-center'>
                             <p className='italic'> Already Having Account</p>
-                         <a className='ml-1 text-green-400 hover:underline'>Login Now</a>
+                            <Link to = "/docLogin"> <a className='ml-1 text-green-400 hover:underline'>Login Now</a></Link>
 
                         </div>
                         <div className='flex flex-col items-center'>
