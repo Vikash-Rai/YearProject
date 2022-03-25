@@ -9,6 +9,9 @@ import DocSignup from './components/signuplogin/DocSignup';
 import DocLogin from './components/signuplogin/DocLogin';
 import DocOtp from './components/signuplogin/DocOtp';
 import DocRegister from './components/forms/DocRegister';
+import DocLists from './components/doctors/DocLists';
+import DocDetail from './components/doctors/DocDetail';
+
 
 function App() {
   return (
@@ -23,6 +26,8 @@ function App() {
       <Route path="/docLogin" element={<DocLogin/>}/> 
       <Route path="/docOtp" element={<DocOtp/>}/> 
       <Route path="/docRegister" element={<DocRegister/>}/> 
+      <Route path="/docLists" element={<DocLists/>}/> 
+      <Route path="/docDetail/:id" element={<DocDetail/>} /> 
       </Routes>
     </BrowserRouter>
   );
