@@ -8,12 +8,13 @@ const Navbar = () => {
     (menu)?setMenu(false):setMenu(true)}
   return (
     <div className="fixed w-full h-14 :bg-yellow-200 bg-white text-gray-200 flex flex-row justify-between items-center">
-    <div className="brand-logo text-2xl text-purple-700 font-bold px-7 ">webname</div>
-      <div>
-      <Link to = "/docSignup"><button class="bg-purple-400 hover:bg-purple-700 text-white font-semibold hover:text-white py-2 px-4 border border-purple-400 hover:border-transparent rounded-full">
-       Login Here
-      </button></Link>
-      </div>
+       
+       <button onClick={()=>showSideMenu()} className="lg:hidden menu-button px-2">
+        {(menu)?<Closemenu className="w-8 hover:cursor-pointer hover:opacity-80 transition-all"/>:<MenuIcon className="w-8 hover:cursor-pointer hover:opacity-80  transition-all"/>}
+        </button>
+
+    <div className="brand-logo text-2xl text-purple-700 font-bold px-7 ">Webname</div>
+      
           
       <ul className="hidden menu-list lg:flex text-purple-700 lg:flex-row flex-row text-xs font-bold pr-7 ">
        <Link to = "/"> <li className="menu-list-item px-2  text-lg"><a href=''>Home</a></li></Link> 
@@ -22,10 +23,20 @@ const Navbar = () => {
        <Link to = "/contact"> <li className="menu-list-item px-2 text-lg"><a href=''>Contact</a></li></Link>
         
       </ul>
+     <div className='flex mr-5'>
+     <div>
+      <Link to = "/docSignup"><button className="rounded-l-full bg-purple-700 hover:bg-purple-500 text-white font-semibold hover:text-white py-2 px-4 border border-purple-400 hover:border-transparent">
+       Doctor
+      </button></Link>
+      </div>
+      <div>
+      <Link to = "/patSignup"><button class="rounded-r-full bg-purple-700 hover:bg-purple-500 text-white font-semibold hover:text-white py-2 px-4 border border-purple-400 hover:border-transparent">
+       Patient
+      </button></Link>
+      </div>
 
-      <button onClick={()=>showSideMenu()} className="lg:hidden menu-button px-5">
-        {(menu)?<Closemenu className="w-8 hover:cursor-pointer hover:opacity-80 transition-all"/>:<MenuIcon className="w-8 hover:cursor-pointer hover:opacity-80 transition-all"/>}
-        </button>
+     </div>
+     
       {
         (menu)?sideMenu():''
       }

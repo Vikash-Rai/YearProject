@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
-import { createDoctor } from '../../services/api';
+import { registerDoctor } from '../../services/api';
 //import DateAdapter from '@mui/lab/AdapterDateFns';
 
 const initialValues={
@@ -29,13 +29,13 @@ const initialValues={
   }
 
 const DocRegister = () => {
-    const[doc,setDoc]=useState(initialValues);
+    const[register,setRegister]=useState(initialValues);
 
     const handleChange=(e)=>{
-        setDoc({...doc,[e.target.name]:e.target.value})
+        setRegister({...register,[e.target.name]:e.target.value})
     }
-    const saveDoc =async()=>{
-        await createDoctor(doc);
+    const registerDoc =async()=>{
+        await registerDoctor(register);
     }
 
    
@@ -208,7 +208,7 @@ const DocRegister = () => {
                                 </label>
                                 <input name='clinicname' onChange={(e)=>handleChange(e)} className='border border-gray-300 outline-none placeholder-gray-400 pl-9 pr-4 py-1 rounded-md transition focus:ring-2 focus:ring-green-400' placeholder="e.g. ABC Health Clinic" type="text" />
                             </div>
-                            <Link to="/docLists"><button onClick={()=>saveDoc()} className='mt-7 bg-violet-700 font-medium inline-flex items-center px-3 py-1 rounded-md shadow-md text-white transition hover:bg-violet-500' type="submit">
+                            <Link to="/docLists"><button onClick={()=>registerDoc()} className='mt-7 bg-violet-700 font-medium inline-flex items-center px-3 py-1 rounded-md shadow-md text-white transition hover:bg-violet-500' type="submit">
                                 Submit
                             </button></Link>
                         </div>

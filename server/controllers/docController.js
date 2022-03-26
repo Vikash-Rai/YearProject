@@ -1,11 +1,11 @@
-import docModel from "../modals/doctorSchema.js"
+import registerModel from "../modals/docModels/registerSchema.js"
 
 
-export const createDoctor=async(request,response)=>{
+export const registerDoctor=async(request,response)=>{
     console.log(request.body)
     try{
-        const doc = await new docModel(request.body);
-        doc.save();
+        const docregister = await new registerModel(request.body);
+        docregister.save();
         response.status(200).json('Doctor Added Successfully')
     }
     catch(error){
@@ -13,9 +13,18 @@ export const createDoctor=async(request,response)=>{
     }
 }
 
+export const signupDoctor=async(request,response)=>{
+    console.log(request.body)
+    try{
+    
+    }catch{
+
+    }
+}
+
 export const getAllDoctors=async(request,response)=>{
     try{
-        const docs = await docModel.find({});
+        const docs = await registerModel.find({});
         response.status(200).json(docs)
 
     }
@@ -26,7 +35,7 @@ export const getAllDoctors=async(request,response)=>{
 
 export const getPost=async(request,response)=>{
     try{
-     let post = await docModel.findById(request.params.id);
+     let post = await registerModel.findById(request.params.id);
      response.status(200).json(post);
     }catch(error){
       response.status(500).json(error);

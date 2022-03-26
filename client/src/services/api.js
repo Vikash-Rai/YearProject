@@ -1,12 +1,21 @@
 import axios from 'axios'
 const URL = 'http://localhost:8000';
 
-export const createDoctor = async(doc)=>{
+export const registerDoctor = async(register)=>{
     try{
-        return await axios.post(`${URL}/create`,doc)
+        return await axios.post(`${URL}/registerdoc`,register)
     }
     catch(error){
         console.log('Error while calling creatDoctor api',error)
+    }
+}
+
+export const signupDoctor = async(doc)=>{
+    try{
+        return await axios.post(`${URL}/signupdoc`,doc)
+    }
+    catch(error){
+
     }
 }
 

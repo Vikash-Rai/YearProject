@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 //doctor form Schema
 
-const DoctorSchema=mongoose.Schema({
+const RegisterSchema=mongoose.Schema({
     fullname:{type:String},
     email:{type:String},
     contact:{type:Number},
@@ -27,5 +27,5 @@ const DoctorSchema=mongoose.Schema({
       }
 })
 
-const docModel = mongoose.model("doc",DoctorSchema)
-export default docModel;
+const registerModel = mongoose.model("registerdoc",RegisterSchema)
+export default registerModel;
