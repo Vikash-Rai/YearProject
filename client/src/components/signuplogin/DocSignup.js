@@ -7,7 +7,8 @@ const initialValues={
     docmail:'',
     docpass:'',
     docpassconfirm:'',
-    docphone:''
+    docphone:'',
+    signupdate:new Date()
 }
 
 const DocSignup = () => {

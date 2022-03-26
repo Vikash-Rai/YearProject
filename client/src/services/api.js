@@ -6,7 +6,7 @@ export const registerDoctor = async(register)=>{
         return await axios.post(`${URL}/registerdoc`,register)
     }
     catch(error){
-        console.log('Error while calling creatDoctor api',error)
+        console.log('Error while calling registerDoctor api',error)
     }
 }
 
@@ -15,7 +15,7 @@ export const signupDoctor = async(doc)=>{
         return await axios.post(`${URL}/signupdoc`,doc)
     }
     catch(error){
-
+        console.log('Error while calling signupDoctor api',error)
     }
 }
 
